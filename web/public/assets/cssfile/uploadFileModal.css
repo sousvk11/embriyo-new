@@ -1,0 +1,119 @@
+.fileUpload {
+    width: 100%;
+    /* max-width: 500px;
+    margin-inline: auto; */
+}
+.backDrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 0;
+    background: var(--bg_clr_backdrop);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.fileUploadTitle {
+    font-weight: 600;
+    font-size: 20px;
+    margin-block-end: 16px;
+}
+.fileUploadBox {
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
+    position: relative;
+    border: 1px dashed #e0e0e0;
+    border-radius: 6px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+input#file {
+    display: none;
+}
+.fileUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.modalUpIcon i {
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--text_clr_grey);
+}
+.dropFileText1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text_clr_primary);
+}
+.dropFileText2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text_clr_grey);
+}
+.dropFileText3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    border: 1px solid var(--clr_border3);
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#modalContainer .upClIcon {
+    display: flex;
+    align-items: center;
+}
+#modalContainer .upClIcon i {
+    font-size: 22px;
+    color: var(--text_clr_red);
+}
+#modalContainer .upClIcon:hover {
+    background-color: inherit;
+}
+#modalContainer .modalUpIcon {
+    position: absolute;
+    top: 160px;
+    left: 204px;
+    margin-inline: auto;
+}
+#modalContainer .modalUpIcon i {
+    color: var(--text_clr_grey);
+    font-size: 30px;
+}
+#modalContainer form#my-awesome-dropzone {
+    min-height: 270px;
+    width: 400px;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* #modalContainer .dz-default.dz-message {
+    justify-content: center;
+    padding-block-start: 40px;
+} */
+@media only screen and (max-width: 575px) {
+    #modalContainer form#my-awesome-dropzone {
+        min-height: 160px;
+        width: 100%;
+    }
+    #modalContainer .modalUpIcon {
+        top: 110px;
+        left: 150px;
+    }
+    #modalContainer .modalUpIcon i {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,681 @@
+/* uploadtized start */
+.mobUploadHeader {
+    display: none;
+}
+
+.uploadHeader {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.headTextLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.headTextLeft .headTitle {
+    color: var(--text_clr_primary);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+}
+.headSerchBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--clr_border3);
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: 100%;
+}
+.headSerchBox input.form-control {
+    border: none;
+    background: none;
+    padding: 0 0 0 8px;
+}
+.headSerchBox input.form-control:focus {
+    background: none !important;
+}
+
+.headTextRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    position: relative;
+}
+.uploadHeader .headTextRightBtn {
+    background: var(--bg_clr_primary2);
+    border-radius: 6px;
+    width: fit-content;
+    padding-inline: 15px;
+    height: 35px;
+    color: var(--text_clr_white);
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.uploadHeader.headTextRightBtn:hover {
+    background: var(--bg_clr_primary3);
+    transition: var(--transition);
+}
+.uploadHeader .headFilterBtn {
+    background: var(--bg_clr_grey);
+    border-radius: 6px;
+    width: fit-content;
+    padding-inline: 15px;
+    height: 35px;
+    color: var(--text_clr_primary);
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.uploadHeader.headFilterBtn:hover {
+    background: var(--bg_clr_grey1);
+    transition: var(--transition);
+}
+
+/* .filterBox {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #ffffff;
+    box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+    width: 107px;
+    padding: 16px;
+    border-radius: 8px;
+    display: none;
+}
+.filterBox .filterboxText {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    padding-block-start: 5px;
+}
+.headFilterBtn:hover > .filterBox {
+    display: block;
+} */
+.uploadHeader .filterBox {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    display: none;
+}
+.uploadHeader .filterBox .inner_filterBox {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    background: #ffffff;
+    padding: 8px 12px;
+}
+.uploadHeader .filterBox .filterboxText {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.uploadHeader .headFilterBtn:hover > .filterBox {
+    display: block;
+}
+.uploadHeader .filterBox.show {
+    display: block;
+}
+.uploadHeader .filterBox .filterboxText:hover {
+    background-color: #f2f2f2;
+}
+
+.uploadSec {
+    width: 100%;
+    padding: 20px 0;
+}
+.uploadInnerSec {
+    width: 100%;
+}
+.uploadInnerSec .gridListBtn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    position: relative;
+}
+
+.gridListBtn .btn.btn_gridListBtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px !important;
+    gap: 8px;
+}
+.gridListBtn .btn.btn_gridListBtn i {
+    padding: 0;
+}
+.btn.btn_gridListBtn.active {
+    background-color: var(--bg_clr_sky1);
+    /* Add padding for a better visual appearance */
+}
+/* .gridDotDetailsBox {
+    position: absolute;
+    top: 20px;
+    right: -12px;
+    z-index: 1;
+    background: #ffffff;
+    box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+    width: 110px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    display: none;
+}
+
+.gridDotDetailsBox .gridDotBoxText {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    padding-block-start: 5px;
+} */
+
+.gridBox {
+    position: relative;
+    border: 1px solid var(--clr_border);
+    background: var(--bg_clr_white);
+    border-radius: 4px;
+    padding: 0;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 8px;
+    overflow-y: hidden;
+}
+.gridSec {
+    padding-block-start: 20px;
+}
+.gridSec .gridBox.gridBoxImg {
+    width: 100%;
+    border: 1px solid var(--clr_border);
+    border-radius: 4px;
+}
+.gridBoxImg {
+    max-width: 200px;
+    margin-inline: auto;
+    padding: 20px;
+}
+.gridBox .gridBoxImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gridBox .inputCheck {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    cursor: pointer;
+}
+.gridBoxText {
+    display: block;
+    background: var(--bg_clr_primary1);
+    padding: 12px 16px;
+    text-align: start;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(122px);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.gridBox:hover .gridBoxText {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+.gridBox:hover {
+    /* transform: scale(1.1); */
+    transition: var(--transition);
+}
+.gridBoxText .prTitle {
+    color: var(--text_clr_white);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.prSize,
+.prDate,
+.prType {
+    padding-block-start: 6px;
+    color: var(--text_clr_white);
+    font-size: 12px;
+}
+.errorIcon {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    cursor: pointer;
+    background: var(--bg_clr_red);
+    color: var(--text_clr_white);
+    font-size: 10px;
+    font-weight: 600;
+    height: 14px;
+    width: fit-content;
+    padding-inline: 4px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.selectProductBox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border-color: var(--clr_border7);
+}
+[type="checkbox"]:focus {
+    box-shadow: none !important;
+}
+.dotIcon {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    cursor: pointer;
+}
+.dotIcon i {
+    color: var(--text_clr_black);
+}
+.dotDetailsBox {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #ffffff;
+    box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+    width: 110px;
+    padding: 10px 12px;
+    border-radius: 3px;
+    display: none;
+    z-index: 1;
+}
+
+.dotDetailsBox .dotBoxText {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    padding-block-start: 5px;
+}
+
+.switchBtn {
+    position: absolute;
+    top: 2px;
+    right: 40px;
+}
+.switchBtn input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+.switchBtn label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 24px;
+    height: 14px;
+    background: var(--bg_clr_grey3);
+    display: block;
+    border-radius: 11px;
+    position: relative;
+}
+
+.switchBtn label:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    background: var(--bg_clr_white);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.switchBtn input:checked + label {
+    background: var(--bg_clr_sky3);
+}
+
+.switchBtn input:checked + label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.switchBtn label:active:after {
+    width: 10px;
+}
+
+/* 
+.tgl {
+	display: none;
+}
+.tgl &,&:after, &:before,& *, & *:after,& *:before,& + .tgl-btn {
+		box-sizing: border-box;
+		
+	}
+  .tgl &,&:after, &:before,& *, & *:after,& *:before,& + .tgl-btn &::selection {
+			background: none;
+		}
+	
+	.tgl &,&:after, &:before,& *, & *:after,& *:before,& + .tgl-btn &::selection + .tgl-btn {
+		outline: 0;
+		display: block;
+		width: 4em;
+		height: 2em;
+		position: relative;
+		cursor: pointer;
+    user-select: none;
+    }
+	.tgl-btn &:after,
+    &:before {
+			position: relative;
+			display: block;
+			content: "";
+			width: 50%;
+			height: 100%;
+		}
+    
+		.tgl-btn &:after {
+			left: 0;
+		}
+    
+	.tgl-btn &:before {
+			display: none;
+		}
+	
+  
+	.tgl-btn &:checked + .tgl-btn:after {
+		left: 50%;
+	} */
+
+/* List sec start */
+
+.listSec {
+    width: 100%;
+}
+
+.uploadListInnerSec {
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 10px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.tableHead th {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text_clr_grey1);
+    padding: 10px 20px;
+}
+.uploadListRow {
+    padding-block-start: 80px;
+    border: 1px solid var(--clr_border);
+}
+.uploadListRow td {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text_clr_grey);
+    padding: 10px 20px;
+}
+.uploadListRow td:nth-child(2) {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text_clr_primary);
+}
+.uploadListRow td:nth-child(3) {
+    color: var(--text_clr_blue);
+}
+.uploadListRow td:nth-child(4) {
+    color: var(--text_clr_primary3);
+}
+.uploadListRow .number {
+    background: var(--bg_clr_lightgreen);
+    color: var(--text_clr_lightgreen);
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.uploadListInnerSec table th:first-child {
+    max-width: 80px;
+}
+
+.listError {
+    background: var(--bg_clr_red1);
+    color: var(--text_clr_red);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+.listPending {
+    background: var(--bg_clr_orange);
+    color: var(--text_clr_orange);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+.listProcess {
+    background: var(--bg_clr_sky2);
+    color: var(--text_clr_blue);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+.uploadListEditIcon,
+/* .uploadListDeleteIcon {
+    width: 100%;
+    height: 15px;
+} */
+.uploadListEditIcon i {
+    color: var(--text_clr_blue);
+}
+.uploadListDeleteIcon i {
+    color: var(--text_clr_red);
+}
+
+/* .uploadListCol {
+    width: 100px;
+} */
+.uploadListImg {
+    width: 50px;
+    display: block;
+}
+.uploadListImg img {
+    width: 100%;
+    height: 100%;
+}
+.uploadListBoxCard {
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    border: 1px dashed var(--clr_border);
+}
+
+.uploadBoxText {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: start;
+}
+.prdTitle {
+    color: var(--text_clr_primary);
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.uploadBoxItem {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+.uploadBoxItemInner {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.prdSize {
+    color: var(--text_clr_grey);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.prdDate {
+    color: var(--text_clr_grey);
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.BtnGroup {
+    display: flex;
+    gap: 10px;
+}
+.editBtn,
+.deleteBtn,
+.viewBtn {
+    width: 100%;
+    height: fit-content;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    color: var(--text_clr_grey);
+    font-weight: 600;
+}
+
+/* List sec end */
+
+.paginationSec {
+    width: 100%;
+    text-align: center;
+}
+.paginationSec .page-link {
+    background: var(--bg_clr_sky2);
+    color: var(--text_clr_black);
+    font-weight: 600;
+}
+.page-item:hover:not(.active):not(.offset):not(.disabled) .page-link {
+    background: var(--bg_clr_primary3);
+    color: var(--bs-text-white);
+    font-weight: 600;
+}
+
+/* responsive start */
+
+@media only screen and (max-width: 991px) {
+    .gridBoxImg {
+        max-width: 200px;
+        margin-inline: auto;
+        padding: 10px 0;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .headSerchBox {
+        width: 100px;
+    }
+    .mobUploadHeader {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+    .uploadPageSec {
+        justify-content: space-between;
+    }
+    .uploadHeader {
+        /* width: 100%; */
+        display: none;
+    }
+    .mobUploadHeader .mobHeadSearchBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid var(--clr_border3);
+        padding: 8px 12px;
+        border-radius: 6px;
+        width: 110px;
+    }
+    .mobHeadSearchBox input.form-control {
+        border: none;
+        background: none;
+        padding: 0 0 0 8px;
+    }
+    .mobHeadUpBtn {
+        background: var(--bg_clr_grey);
+        border-radius: 6px;
+        width: fit-content;
+        padding-inline: 15px;
+        height: 35px;
+        color: var(--text_clr_primary);
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+    .mobHeadFilterBtn {
+        background: var(--bg_clr_grey);
+        border-radius: 6px;
+        width: fit-content;
+        padding-inline: 15px;
+        height: 35px;
+        color: var(--text_clr_primary);
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobFilterBox {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background: #ffffff;
+        box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+        width: 107px;
+        padding: 16px;
+        border-radius: 8px;
+        display: none;
+    }
+    .mobFilterBox .filterboxText {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text_clr_grey1);
+        padding-block-start: 5px;
+    }
+    .mobHeadFilterBtn:hover > .mobFilterBox {
+        display: block;
+    }
+    .gridBoxImg {
+        max-width: 220px;
+        margin-inline: auto;
+        padding: 10px 0;
+    }
+}

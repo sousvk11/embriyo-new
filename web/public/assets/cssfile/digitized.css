@@ -1,0 +1,447 @@
+/* uploadtized start */
+.mobDigiHeader {
+    display: none;
+}
+.digiSec {
+    width: 100%;
+    padding: 20px 0;
+}
+.digiHeader {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.digiHeader .headTextLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.digiHeader .headTextLeft .headTitle {
+    color: var(--text_clr_primary);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+}
+.digiHeader .headSerchBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--clr_border3);
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: 100%;
+}
+.digiHeader .headSerchBox input.form-control {
+    border: none;
+    background: none;
+    padding: 0 0 0 8px;
+}
+.digiHeader .headSerchBox input.form-control:focus {
+    background: none !important;
+}
+
+.digiHeader .headTextRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    position: relative;
+}
+.digiHeader .headTextRightBtn {
+    background: var(--bg_clr_primary2);
+    border-radius: 6px;
+    width: fit-content;
+    padding-inline: 15px;
+    height: 35px;
+    color: var(--text_clr_white);
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.digiHeader .headTextRightBtn:hover {
+    background: var(--bg_clr_primary3);
+    transition: var(--transition);
+}
+.digiHeader .headFilterBtn {
+    background: var(--bg_clr_grey);
+    border-radius: 6px;
+    width: fit-content;
+    padding-inline: 15px;
+    height: 35px;
+    color: var(--text_clr_primary);
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.digiHeader .headFilterBtn:hover {
+    background: var(--bg_clr_grey1);
+    transition: var(--transition);
+}
+
+.digiHeader .filterBox {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    display: none;
+}
+.digiHeader .filterBox .inner_filterBox {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    background: #ffffff;
+    padding: 8px 12px;
+}
+.digiHeader .filterBox .filterboxText {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.digiHeader .headFilterBtn:hover > .filterBox {
+    display: block;
+}
+.digiHeader .filterBox.show {
+    display: block;
+}
+.digiHeader .filterBox .filterboxText:hover {
+    background-color: #f2f2f2;
+}
+/*
+.digiHeader .filterBox.show {
+    display: block;
+}
+
+.digiHeader .filterBox .filterboxText {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    padding-block-start: 5px 7px;
+    width: 100%;
+}
+.digiHeader .filterBox .filterboxText:hover {
+    background-color: #f2f2f2;
+}
+.digiHeader .headFilterBtn:hover > .filterBox {
+    display: block;
+}
+.digiHeader .filterBox.show {
+    display: block;
+}
+
+.digiHeader .filterBox .filterboxText:hover {
+    background-color: #f2f2f2;
+}
+
+.digiHeader.filterBox .inner_filterBox {
+    width: fit-content !important;
+} */
+.digiInnerSec {
+    width: 100%;
+}
+.digiInnerSec .gridListBtn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    position: relative;
+}
+
+.gridListBtn button.btn {
+    padding: 0 !important;
+}
+.gridListBtn button.btn i {
+    font-size: 18px;
+    color: var(--text_clr_black);
+}
+.gridListBtn .gridDotIcon {
+    cursor: pointer;
+}
+.gridDotIcon i {
+    color: var(--text_clr_black);
+}
+.gridDotDetailsBox {
+    position: absolute;
+    top: 20px;
+    right: -12px;
+    z-index: 1;
+    background: #ffffff;
+    box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+    width: 110px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    /* display: none; */
+}
+
+.gridDotDetailsBox .gridDotBoxText:hover {
+    background-color: #f2f2f2; /* Add a hover color */
+}
+
+.gridDotDetailsBox.show {
+    display: block;
+}
+
+.digiInnerSec .gridBox {
+    position: relative;
+    border: 1px solid var(--clr_border);
+    background: var(--bg_clr_white);
+    border-radius: 4px;
+    padding: 0;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 8px;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.digiInnerSec .gridSec {
+    padding-block-start: 20px;
+}
+.gridSec .gridBox.gridBoxImg {
+    width: 100%;
+    border: 1px solid var(--clr_border);
+    border-radius: 4px;
+}
+.gridBoxImg {
+    max-width: 200px;
+    margin-inline: auto;
+    padding: 20px;
+}
+.gridBox .gridBoxImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gridBox .inputCheck {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    cursor: pointer;
+}
+.gridBoxText {
+    display: block;
+    background: var(--bg_clr_primary1);
+    padding: 12px 16px;
+    text-align: start;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(122px);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.gridBox:hover .gridBoxText {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+.gridBox:hover {
+    /* transform: scale(1.1); */
+    transition: var(--transition);
+}
+.digiInnerSec .gridBoxText .prTitle {
+    color: var(--text_clr_white);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.prSize,
+.prDate,
+.prType {
+    padding-block-start: 6px;
+    color: var(--text_clr_white);
+    font-size: 12px;
+}
+
+.digiInnerSec .gridBoxText .dotIcon {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    cursor: pointer;
+}
+.digiInnerSec .gridBoxText .dotIcon i {
+    color: var(--text_clr_white);
+}
+.digiInnerSec .dotDetailsBox {
+    position: absolute;
+    top: 14px;
+    right: 0px;
+    background: #ffffff;
+    box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+    width: 110px;
+    padding: 10px 12px;
+    border-radius: 3px;
+    /* display: none; */
+}
+
+.dotDetailsBox .dotBoxText {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    padding-block-start: 5px;
+}
+
+.paginationSec {
+    width: 100%;
+    text-align: center;
+}
+.gridListBtn .btn.btn_gridListBtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px !important;
+    gap: 8px;
+}
+.gridListBtn .btn.btn_gridListBtn i {
+    padding: 0;
+}
+.btn.btn_gridListBtn.active {
+    background-color: #b2cdcd;
+    /* Add padding for a better visual appearance */
+}
+
+#my-awesome-dropzone {
+    min-height: 200px;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gridDotDetailsBox {
+    margin: 17px 10px;
+}
+.dz-remove {
+    z-index: 9999; /* Ensure it's above other elements */
+    color: red; /* Adjust color if needed */
+}
+
+/* responsive start */
+
+@media only screen and (max-width: 991px) {
+    .gridBoxImg {
+        max-width: 200px;
+        margin-inline: auto;
+        padding: 10px 0;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .headSerchBox {
+        width: 100px;
+    }
+    .mobdigiHeader {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+    .digiPageSec {
+        justify-content: space-between;
+    }
+    .digiHeader {
+        /* width: 100%; */
+        display: none;
+    }
+    .mobdigiHeader .mobHeadSearchBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid var(--clr_border3);
+        padding: 8px 12px;
+        border-radius: 6px;
+        width: 110px;
+    }
+    .mobHeadSearchBox input.form-control {
+        border: none;
+        background: none;
+        padding: 0 0 0 8px;
+    }
+    .mobHeadUpBtn {
+        background: var(--bg_clr_grey);
+        border-radius: 6px;
+        width: fit-content;
+        padding-inline: 15px;
+        height: 35px;
+        color: var(--text_clr_primary);
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+    .mobHeadFilterBtn {
+        background: var(--bg_clr_grey);
+        border-radius: 6px;
+        width: fit-content;
+        padding-inline: 15px;
+        height: 35px;
+        color: var(--text_clr_primary);
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobFilterBox {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background: #ffffff;
+        box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+        width: 107px;
+        padding: 16px;
+        border-radius: 8px;
+        display: none;
+    }
+    .mobFilterBox .filterboxText {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text_clr_grey1);
+        padding-block-start: 5px;
+    }
+    .mobHeadFilterBtn:hover > .mobFilterBox {
+        display: block;
+    }
+    .gridBoxImg {
+        max-width: 220px;
+        margin-inline: auto;
+        padding: 10px 0;
+    }
+}
+
+/* Modal css */
+.modal-container {
+    height: fit-content !important;
+}
+
+.modal-close:hover {
+    background-color: #628ac2;
+}
+
+/* breadcrumb */
+.breadcrumb-item.text-muted > a {
+    font-weight: 800;
+}

@@ -1,0 +1,82 @@
+.dashbrdSec {
+    width: 100%;
+}
+.dashbrdInnerSec {
+    width: 100%;
+}
+.dashbrdSec .dashSummeryCard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.dashbrdSec .dashSummeryCard .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    min-height: 110px;
+    border: 1px dashed var(--clr_border);
+    border-radius: 6px;
+    box-shadow: var(--shadow2);
+    margin-block-end: 0;
+    cursor: pointer;
+}
+.dashbrdSec .dashSummeryCard .card:hover {
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.dashbrdSec .dashSummeryCard .cardTextBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+.dashbrdSec .dashSummeryCard .cardTextBox .cardText {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text_clr_primary);
+}
+.dashbrdSec .dashSummeryCard .cardTextBox .cardTextDate {
+    font-size: 14px;
+    color: var(--text_clr_grey1);
+    font-weight: 600;
+}
+.dashbrdSec .dashSummeryCard .userEarn {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text_clr_blue);
+}
+.dashbrdSec .dashSummeryCard .totalEarn {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text_clr_lightgreen);
+}
+.dashbrdSec .dashSummeryCard .pendEarn {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text_clr_orange);
+}
+.dashbrdSec .dashSummeryCard .recentEarn {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text_clr_primary1);
+}
+
+@media only screen and (max-width: 1400px) {
+    .summeryCard {
+        flex-wrap: wrap;
+    }
+    .summeryCard .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+

@@ -1,0 +1,104 @@
+.sidebarSec {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: var(--bg_clr_primary1);
+}
+.sidebarInner {
+    width: 100%;
+}
+
+.sidebarInnerItem {
+    width: 100%;
+    padding-block-start: 73px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logoImg {
+    width: 252px;
+}
+.logoImg img {
+    width: 100%;
+    height: 100%;
+}
+.menuBar {
+    display: flex;
+    flex-direction: column;
+    padding-block-start: 120px;
+}
+.menuList {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 36px;
+    position: relative;
+    padding-block-end: 52px;
+    z-index: 1;
+}
+.menuList:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: var(--clr_border4);
+    bottom: 0;
+    left: 31px;
+    z-index: -1;
+}
+.menuBar .menuList:nth-child(4):before {
+    display: none;
+}
+.menuBar .menuList:nth-child(1) > .menuIcon {
+    background: var(--bg_clr_white);
+}
+.menuIcon {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: var(--bg_clr_primary3);
+    padding: 16px;
+}
+.menuIcon img {
+    width: 100%;
+    height: 100%;
+}
+.menuText {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.menuText .title {
+    font-size: 22px;
+    color: var(--text_clr_white);
+    font-weight: 500;
+    line-height: 25px;
+}
+.menuText .para {
+    font-size: 15px;
+    color: var(--text_clr_primary3);
+    font-weight: 700;
+    line-height: 20px;
+}
+.sidebarFooter {
+    width: 100%;
+    border-block-start: 1px solid var(--clr_border4);
+    padding: 20px 120px 30px 120px;
+}
+.sidebarFooter .footerItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.sidebarFooter .footerItem .footerText {
+    color: var(--text_clr_white);
+    font-size: 11px;
+    font-weight: 400;
+}
+.sidebarFooter .footerItem > .footerText:nth-child(1) {
+    cursor: pointer;
+}

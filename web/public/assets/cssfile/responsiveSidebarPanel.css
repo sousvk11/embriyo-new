@@ -1,0 +1,206 @@
+.responSidebarSec {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: var(--bg_clr_primary1);
+}
+.responSidebarSec .sidebarInner {
+    width: 100%;
+}
+
+.responSidebarSec .sidebarInnerItem {
+    width: 100%;
+    padding-block-start: 73px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.responSidebarSec .logoImg {
+    width: 252px;
+}
+.responSidebarSec .logoImg img {
+    width: 100%;
+    height: 100%;
+}
+.responSidebarSec .menuBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.responSidebarSec .menuList {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 36px;
+    position: relative;
+    padding-block-end: 52px;
+    z-index: 1;
+}
+.responSidebarSec .menuList:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: var(--clr_border4);
+    bottom: 0;
+    left: 31px;
+    z-index: -1;
+}
+.responSidebarSec .menuBar .menuList:nth-child(4):before {
+    display: none;
+}
+.responSidebarSec .menuBar .menuList:nth-child(1) > .menuIcon {
+    background: var(--bg_clr_white);
+}
+.responSidebarSec .menuIcon {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: var(--bg_clr_primary3);
+    padding: 16px;
+}
+.responSidebarSec .menuIcon img {
+    width: 100%;
+    height: 100%;
+}
+.responSidebarSec .menuText {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.responSidebarSec .menuText .title {
+    font-size: 22px;
+    color: var(--text_clr_white);
+    font-weight: 500;
+    line-height: 25px;
+}
+.menuText .para {
+    font-size: 15px;
+    color: var(--text_clr_primary3);
+    font-weight: 700;
+    line-height: 20px;
+}
+.sidebarFooter {
+    width: 100%;
+    border-block-start: 1px solid var(--clr_border4);
+    padding: 20px 120px 30px 120px;
+}
+.sidebarFooter .footerItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.sidebarFooter .footerItem .footerText {
+    color: var(--text_clr_white);
+    font-size: 11px;
+    font-weight: 400;
+}
+.sidebarFooter .footerItem > .footerText:nth-child(1) {
+    cursor: pointer;
+}
+
+/* @media only screen and (max-width: 1326px) { */
+.responSidebarSec {
+    background: var(--bg_clr_primary1);
+}
+
+.responSidebarSec .sidebarInnerItem {
+    width: 100%;
+    padding-block: 30px;
+    padding-inline: 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.responSidebarSec .logoImg {
+    width: 200px;
+}
+.responSidebarSec .menuBar {
+    width: 100%;
+    padding-block-start: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 110px;
+}
+.responSidebarSec .menuList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    position: relative;
+    padding-block-end: 0;
+    z-index: 1;
+}
+.responSidebarSec .menuIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--bg_clr_primary3);
+    padding: 13px;
+}
+.responSidebarSec .menuText .title {
+    font-size: 17px;
+    color: var(--text_clr_white);
+    font-weight: 500;
+    line-height: 20px;
+}
+.responSidebarSec .menuList:before {
+    content: "";
+    position: absolute;
+    width: 192px;
+    height: 1px;
+    background: var(--clr_border4);
+    top: 30px;
+    right: 0;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 767px) {
+    .responSidebarSec .menuBar {
+        gap: 70px;
+    }
+    .responSidebarSec .menuList:before {
+        width: 140px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .responSidebarSec .menuBar {
+        gap: 30px;
+    }
+    .responSidebarSec .menuList:before {
+        width: 90px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .responSidebarSec .logoImg {
+        width: 180px;
+    }
+    .responSidebarSec .menuIcon {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+    .responSidebarSec .menuList:before {
+        top: 22px;
+    }
+    .responSidebarSec .menuText .title {
+        font-size: 15px;
+        line-height: 17px;
+    }
+    .responSidebarSec .menuBar {
+        gap: 30px;
+    }
+    .responSidebarSec .menuList:before {
+        width: 90px;
+    }
+}

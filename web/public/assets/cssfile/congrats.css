@@ -1,0 +1,103 @@
+.congratsSec {
+    width: 100%;
+    padding: 63px 74px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.congratsInner {
+    width: 100%;
+}
+.congratsBody {
+    max-width: 480px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.congratsImg {
+    width: 218px;
+}
+.congratsImg img {
+    width: 100%;
+    height: 100%;
+}
+.congratsTitle {
+    font-size: 32px;
+    line-height: 38px;
+    color: var(--text_clr_primary);
+    font-weight: 500;
+    padding-block-start: 40px;
+    text-align: center;
+}
+.congratsPara {
+    font-size: 18px;
+    color: var(--text_clr_primary3);
+    font-weight: 500;
+    line-height: 22px;
+    padding-block-start: 25px;
+    text-align: center;
+}
+.congratsBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-block-start: 60px;
+}
+
+/* .prevBtn {
+    width: 143px;
+    height: 47px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: var(--bg_clr_prevbtn);
+    border-radius: 9px;
+    padding-inline: 17px;
+}
+.prevBtn .title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text_clr_primary);
+    padding-inline-start: 14px;
+} */
+
+.storeBtn {
+    width: 152px;
+    height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg_clr_primary1);
+    border-radius: 9px;
+    padding-inline: 17px;
+}
+.storeBtn .title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text_clr_white);
+    padding-inline-start: 14px;
+}
+.arrowIcon {
+    width: 50px;
+    height: 47px;
+    border-radius: 9px;
+    background: var(--text_clr_leftarrow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrowIcon .icon i {
+    color: var(--text_clr_white);
+}
+/* .prevBtn .icon i {
+    color: var(--text_clr_primary);
+    transform: rotate(180deg);
+} */
+
+.storeBtn .icon i {
+    color: var(--text_clr_white);
+}

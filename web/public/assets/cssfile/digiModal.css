@@ -1,0 +1,88 @@
+.digiModal {
+    width: 100%;
+    max-width: 640px;
+    margin-inline: auto;
+    background: var(--bg_clr_white);
+    border-radius: 10px;
+    border: 1px solid var(--clr_border);
+    box-shadow: var(--shadow2);
+
+    /* Center the modal */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.digiModalInner {
+    width: 100%;
+    padding: 40px 30px;
+    position: relative;
+}
+.digiModalImg {
+    width: 100%;
+    max-width: 200px;
+    margin-inline: auto;
+}
+.digiModalImg img {
+    width: 100%;
+    height: 100%;
+}
+.digiModalBox .prModalTitle {
+    color: var(--text_clr_primary);
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.digiModalSize,
+.digiModalDate,
+.digiModalType {
+    padding-block-start: 12px;
+    color: var(--text_clr_grey);
+    font-size: 15px;
+}
+
+.actionBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text_clr_white);
+    background: var(--bg_clr_green1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.actionBtnGroup {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #ffffff;
+    box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+    width: 107px;
+    padding: 16px;
+    border-radius: 8px;
+    display: none;
+}
+
+.actionBtnGroup .actionBoxText {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    padding-block-start: 5px;
+}
+.closeIcon {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+.closeIcon i {
+    font-size: 18px;
+    color: var(--text_clr_grey);
+    opacity: 0.6;
+}
+
+.gridBox {
+    cursor: pointer;
+}

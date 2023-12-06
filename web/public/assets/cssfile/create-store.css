@@ -1,0 +1,84 @@
+.mainBody {
+    width: 100%;
+}
+.bodyInner {
+    width: 100%;
+    display: flex;
+}
+.sidebarContent {
+    width: 100%;
+    max-width: 503px;
+    position: fixed;
+    z-index: 105;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+}
+.mainContent {
+    /* width: calc(100% - 503px); */
+    width: 100%;
+    padding-inline-start: 503px;
+    height: 100vh;
+}
+
+/* active menu icon */
+.menuIcon.active {
+    background: #fff;
+}
+.responsiveSidebarContent {
+    display: none;
+}
+.dashboardFooter {
+    display: none;
+}
+@media only screen and (max-width: 1326px) {
+    .mainContent {
+        padding-inline-start: 0;
+        width: 100%;
+        margin-block-start: 211px;
+        height: 100%;
+    }
+    .sidebarContent {
+        display: none;
+    }
+    .responsiveSidebarContent {
+        display: block;
+        width: 100%;
+        position: fixed;
+        z-index: 105;
+        height: fit-content;
+    }
+    .bodyInner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* gap: 80px; */
+    }
+    .dashboardFooter {
+        display: block;
+        width: 100%;
+        background: var(--bg_clr_primary1);
+        padding: 20px 0 20px 0;
+    }
+
+    .dashboardFooter .footerItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .dashboardFooter .footerItem .footerText {
+        color: var(--text_clr_white);
+        font-size: 11px;
+        font-weight: 400;
+    }
+    .dashboardFooter .footerItem > .footerText:nth-child(1) {
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .bodyInner {
+        gap: inherit;
+    }
+}

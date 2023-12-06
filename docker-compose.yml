@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  # Laravel Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: laravel-app
+    volumes:
+      - ./web:/var/www/html
+      - ./entrypoint.sh:/entrypoint.sh
+    ports:
+      - "8080:80"
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html/public
+    depends_on:
+      - mysql
+    networks:
+      - laravel-net
+
+  # MySQL Database
+  mysql:
+    image: mysql:8
+    container_name: laravel-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: souvik98
+      MYSQL_DATABASE: embroid
+      MYSQL_USER: svk
+      MYSQL_PASSWORD: souvik98
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    networks:
+      - laravel-net
+
+  #PhpMyadmin 
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: laravel-phpmyadmin
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      UPLOAD_LIMIT: 1024M
+      MEMORY_LIMIT: 512M
+    ports:
+      - "8081:80"
+    networks:
+      - laravel-net  
+  #Nginx Reverse Proxy      
+  nginx:
+    image: nginx
+    container_name: laravel-nginx
+    ports:  
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./laravel/nginx/conf.d:/etc/nginx/conf.d
+      - ./laravel/nginx/ssl:/etc/ssl/private
+    depends_on:
+      - app
+      - phpmyadmin
+    networks:
+      - laravel-net
+networks:
+  laravel-net:

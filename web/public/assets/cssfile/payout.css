@@ -1,0 +1,684 @@
+.payoutSec {
+    width: 100%;
+    padding: 20px 0;
+}
+.payoutInnerSec {
+    width: 100%;
+}
+
+.summeryCard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.summeryCard .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    min-height: 110px;
+    border: 1px dashed var(--clr_border);
+    border-radius: 6px;
+    box-shadow: var(--shadow2);
+    margin-block-end: 0;
+    cursor: pointer;
+}
+.summeryCard .card:hover {
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.summeryCard .cardTextBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+.summeryCard .cardTextBox .cardText {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text_clr_primary);
+}
+.summeryCard .cardTextBox .cardTextDate {
+    font-size: 14px;
+    color: var(--text_clr_grey1);
+    font-weight: 600;
+}
+.summeryCard .userEarn {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text_clr_blue);
+}
+.summeryCard .totalEarn {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text_clr_lightgreen);
+}
+.summeryCard .pendEarn {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text_clr_orange);
+}
+.summeryCard .recentEarn {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text_clr_primary1);
+}
+
+.payOutFlexBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-block: 50px;
+    padding-inline: 20px;
+}
+
+/* List sec start */
+.listSec {
+    width: 100%;
+    position: relative;
+    border: 1px dashed var(--clr_border);
+    padding: 20px;
+    border-radius: 8px;
+    overflow: auto;
+    white-space: nowrap;
+}
+.transHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.transSerchBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--clr_border3);
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: 100%;
+}
+.transSerchBox input.form-control {
+    border: none;
+    background: none;
+    padding: 0 0 0 8px;
+}
+.transSerchBox input.form-control:focus {
+    background: none !important;
+}
+.transHeader .headFilterBtn {
+    background: var(--bg_clr_grey);
+    border-radius: 6px;
+    width: fit-content;
+    padding-inline: 15px;
+    height: 35px;
+    color: var(--text_clr_primary);
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.transHeader .headFilterBtn:hover {
+    background: var(--bg_clr_grey1);
+    transition: var(--transition);
+}
+
+.transHeader .filterBox {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #ffffff;
+    box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+    width: 107px;
+    padding: 16px;
+    border-radius: 8px;
+    display: none;
+}
+.transHeader .filterBox .filterboxText {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    padding-block-start: 5px;
+}
+.transHeader .headFilterBtn:hover > .filterBox {
+    display: block;
+}
+
+.transBox .transBoxText {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    padding-block-start: 5px;
+}
+.payoutInnerSec {
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.tableHead th {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text_clr_grey1);
+    padding: 10px 20px;
+}
+.payoutRow {
+    padding-block-start: 80px;
+    border: 1px solid var(--clr_border);
+}
+.payoutRow td {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text_clr_grey);
+    padding: 10px 20px;
+}
+
+.payoutRow td:nth-child(2) {
+    color: var(--text_clr_blue);
+}
+.payoutRow td:nth-child(3) {
+    color: var(--text_clr_black);
+    font-weight: 600;
+}
+.payoutRow td:nth-child(4) {
+    color: var(--text_clr_primary3);
+}
+.payoutRow td:nth-child(5) {
+    color: var(--text_clr_lightgreen);
+    font-weight: 600;
+}
+.payoutRow .number {
+    background: var(--bg_clr_lightgreen);
+    color: var(--text_clr_lightgreen);
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.payoutInnerSec table th:first-child {
+    max-width: 80px;
+}
+
+.listError {
+    background: var(--bg_clr_red1);
+    color: var(--text_clr_red);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+.listError:hover {
+    color: var(--text_clr_red1);
+    transition: var(--transition);
+}
+.listPending {
+    background: var(--bg_clr_orange);
+    color: var(--text_clr_orange);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+.listPending:hover {
+    color: var(--text_clr_orange1);
+    transition: var(--transition);
+}
+.listProcess {
+    background: var(--bg_clr_sky2);
+    color: var(--text_clr_blue);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+.listProcess:hover {
+    color: var(--text_clr_blue1);
+    transition: var(--transition);
+}
+.payoutEditIcon,
+.payoutDeleteIcon {
+    width: 100%;
+    height: 15px;
+}
+.payoutEditIcon i {
+    color: var(--text_clr_blue);
+}
+.payoutDeleteIcon i {
+    color: var(--text_clr_red);
+}
+
+/* .payoutCol {
+    width: 100px;
+} */
+.payoutImg {
+    width: 50px;
+    display: inline-block;
+}
+.payoutImg img {
+    width: 100%;
+    height: 100%;
+}
+.payoutBoxCard {
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    border: 1px dashed var(--clr_border);
+}
+
+.BtnGroup {
+    display: flex;
+    gap: 10px;
+}
+.editBtn,
+.deleteBtn,
+.viewBtn {
+    width: 100%;
+    height: fit-content;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    color: var(--text_clr_grey);
+    font-weight: 600;
+}
+
+/* List sec end */
+
+.payMethodSec {
+    width: 100%;
+    max-width: 320px;
+    border: 1px dashed var(--clr_border);
+    padding: 20px;
+    border-radius: 8px;
+}
+.payMethod {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+}
+.payMethodInnerBox {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* .errorAlert {
+    width: 100%;
+    background: var(--bg_clr_red1);
+    border: 1px solid var(--clr_border_red);
+    padding: 10px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.errorAlertBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.errorAlertBox i {
+    font-size: 18px;
+    color: var(--text_clr_red);
+}
+.errorAlertBox .errorAlertText {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text_clr_red);
+}
+.errorAlertBoxCl i {
+    font-size: 14px;
+    color: var(--text_clr_red);
+} */
+
+.payTaxBox {
+    width: 100%;
+}
+.payTaxBox .payTaxTitle {
+    font-size: 15px;
+    color: var(--text_clr_primary);
+    font-weight: 700;
+    padding-block-end: 24px;
+}
+.payTaxBox .payTaxBoxInner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.payTaxBox .payTaxBoxInner .taxDrpdwn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    background: var(--text_clr_orange);
+    border-radius: 6px;
+    width: fit-content;
+    padding-inline: 15px;
+    height: 32px;
+    color: var(--text_clr_white);
+    font-size: 13px;
+    font-weight: 500;
+}
+.payTaxBox .payTaxBoxInner .taxDrpdwn i {
+    color: var(--text_clr_white);
+    font-size: 15px;
+}
+.payTaxBox .payTaxBoxInner .taxDrpdwn:hover {
+    background: var(--text_clr_orange1);
+    transition: var(--transition);
+}
+.payTaxBox .payTaxBoxInner .payTaxInfo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    background: var(--bg_clr_primary3);
+    border-radius: 6px;
+    width: fit-content;
+    padding-inline: 15px;
+    height: 32px;
+    color: var(--text_clr_white);
+    font-size: 13px;
+    font-weight: 500;
+}
+.payTaxBox .payTaxBoxInner .payTaxInfo:hover {
+    background: var(--bg_clr_primary1);
+    transition: var(--transition);
+}
+.payTaxBox .payTaxBoxInner .payTaxInfo .taxImg {
+    width: 16px;
+    display: inline-block;
+    filter: invert(1);
+}
+.payTaxBox .payTaxBoxInner .payTaxInfo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.payMethodSideBox {
+    width: 100%;
+    padding-block-start: 24px;
+    border-block-start: 1px solid var(--clr_border);
+}
+.payMethodTitle {
+    font-size: 15px;
+    color: var(--text_clr_primary);
+    font-weight: 700;
+    padding-block-end: 24px;
+}
+.payMethodBox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.payMethodBox .payMethodBoxItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+}
+.payCardIcon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+}
+.payCardIcon i {
+    font-size: 16px;
+    color: var(--text_clr_black);
+}
+.payMethodPara {
+    font-size: 14px;
+    color: var(--text_clr_primary);
+    font-weight: 600;
+}
+.faqSideBox {
+    padding-block-start: 24px;
+    border-block-start: 1px solid var(--clr_border);
+}
+.faqTitle {
+    font-size: 15px;
+    color: var(--text_clr_primary);
+    font-weight: 700;
+    padding-block-end: 24px;
+}
+
+button.accordion-button.accTitle {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text_clr_white);
+    background: var(--bg_clr_sky3);
+    border-radius: 4px;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../images/icon/down-arrow.svg);
+    filter: invert(1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 10px;
+}
+.accordion-button::after {
+    background-image: url(../images/icon/down-arrow.svg);
+    filter: invert(1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 10px;
+}
+.accordion-body {
+    color: var(--text_clr_black);
+    font-weight: 500;
+    background: var(--bg_clr_sky2);
+    padding: 12px;
+}
+.accordion .show {
+    visibility: visible;
+}
+.modalTitle {
+    color: var(--text_clr_blue);
+}
+.frmModal input#fname,
+.frmModal input#lname,
+.frmModal input#inputEmail4,
+.frmModal textarea#w3review {
+    border: 1px solid var(--clr_border2);
+    border-radius: 2px;
+    box-shadow: none;
+}
+.contactModalBtnBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contactModalBtn {
+    background: var(--bg_clr_green1);
+    border-radius: 6px;
+    width: fit-content;
+    padding-inline: 15px;
+    height: 32px;
+    color: var(--text_clr_white);
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.contactModalBtn:hover {
+    color: var(--text_clr_white);
+    transition: var(--transition);
+}
+.contactModalBtn i {
+    color: var(--text_clr_white);
+    font-size: 15px;
+}
+button.btn.submitBtn {
+    width: fit-content;
+    margin-inline: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text_clr_white) !important;
+    background-color: var(--bg_clr_sky3);
+    height: 35px;
+    padding-inline: 10px !important;
+}
+button.btn.submitBtn:hover {
+    color: var(--text_clr_white) !important;
+    background-color: var(--bg_clr_primary3);
+    transition: var(--transition);
+}
+.paginationSec {
+    width: 100%;
+    text-align: center;
+}
+
+.collapsible-link {
+    width: 100%;
+    position: relative;
+    text-align: left;
+}
+
+.collapsible-link::before {
+    content: "\f107";
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+    transform: translateY(-50%);
+    display: block;
+    font-family: "FontAwesome";
+    font-size: 1.1rem;
+}
+
+.collapsible-link[aria-expanded="true"]::before {
+    content: "\f106";
+}
+/* responsive start */
+
+@media only screen and (max-width: 1400px) {
+    .summeryCard {
+        flex-wrap: wrap;
+    }
+    .summeryCard .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .gridBoxImg {
+        max-width: 200px;
+        margin-inline: auto;
+        padding: 10px 0;
+    }
+    .payOutFlexBox {
+        flex-direction: column;
+    }
+    .listSec {
+        width: 100%;
+    }
+    .payMethod {
+        width: 100%;
+        max-width: inherit;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .headSerchBox {
+        width: 100px;
+    }
+    .mobUploadHeader {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+    .payoutPageSec {
+        justify-content: space-between;
+    }
+    .uploadHeader {
+        /* width: 100%; */
+        display: none;
+    }
+    .mobUploadHeader .mobHeadSearchBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid var(--clr_border3);
+        padding: 8px 12px;
+        border-radius: 6px;
+        width: 110px;
+    }
+    .mobHeadSearchBox input.form-control {
+        border: none;
+        background: none;
+        padding: 0 0 0 8px;
+    }
+    .mobHeadUpBtn {
+        background: var(--bg_clr_grey);
+        border-radius: 6px;
+        width: fit-content;
+        padding-inline: 15px;
+        height: 35px;
+        color: var(--text_clr_primary);
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+    .mobHeadFilterBtn {
+        background: var(--bg_clr_grey);
+        border-radius: 6px;
+        width: fit-content;
+        padding-inline: 15px;
+        height: 35px;
+        color: var(--text_clr_primary);
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobFilterBox {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background: #ffffff;
+        box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+        width: 107px;
+        padding: 16px;
+        border-radius: 8px;
+        display: none;
+    }
+    .mobFilterBox .filterboxText {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text_clr_grey1);
+        padding-block-start: 5px;
+    }
+    .mobHeadFilterBtn:hover > .mobFilterBox {
+        display: block;
+    }
+    .gridBoxImg {
+        max-width: 220px;
+        margin-inline: auto;
+        padding: 10px 0;
+    }
+}

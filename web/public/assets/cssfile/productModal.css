@@ -1,0 +1,115 @@
+.productModal {
+    width: 100%;
+    max-width: 640px;
+    margin-inline: auto;
+    background: var(--bg_clr_white);
+    border-radius: 10px;
+    border: 1px solid var(--clr_border);
+    box-shadow: var(--shadow2);
+}
+.productModalInner {
+    width: 100%;
+    padding: 40px 30px;
+    position: relative;
+}
+.productModalBox {
+    background: var(--text_clr_primary);
+    text-align: center;
+    /* display: flex; */
+}
+.productModalImg {
+    width: 100%;
+    position: relative;
+}
+.productModalImg .productModalImgBox {
+    width: 100%;
+    height: 350px;
+}
+.productModalImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.ex {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--text_clr_blue);
+    padding: 3px 7px;
+    border-radius: 4px;
+}
+.prModalType {
+    color: var(--text_clr_white);
+    font-size: 13px;
+    font-weight: 600;
+}
+.productModalBox {
+    color: var(--text_clr_primary);
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.prModalSize,
+.prModalDate {
+    color: var(--text_clr_white);
+    font-size: 15px;
+    font-weight: 400 !important;
+}
+
+.modalHeaderRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.actionDotBtn i {
+    font-size: 18px;
+    color: var(--text_clr_grey);
+}
+.actionDotBtn {
+    display: flex;
+    align-items: center;
+}
+.actionBtnGroup {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #ffffff;
+    box-shadow: -1px 3px 20px 1px rgba(82, 63, 105, 0.15);
+    width: 110px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    display: none;
+}
+
+.actionBtnGroup .actionBoxText {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text_clr_grey1);
+    padding-block-start: 5px;
+}
+
+.clIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg_clr_red);
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+.clIcon i {
+    padding: 5px;
+    font-size: 12px;
+    color: var(--text_clr_white);
+}
+.clIcon:hover {
+    background: var(--bg_clr_red);
+}

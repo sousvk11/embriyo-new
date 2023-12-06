@@ -1,0 +1,103 @@
+.formSec {
+    width: 100%;
+    padding: 63px 74px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.formInner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+    /* height: 100%; */
+}
+.formHeader {
+    width: 100%;
+}
+.formHeader .number {
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--text_clr_primary1);
+    font-weight: 500;
+}
+.formHeader .text {
+    font-size: 32px;
+    line-height: 38px;
+    color: var(--text_clr_primary);
+    font-weight: 500;
+}
+.formBody {
+    max-width: 463px;
+    width: 100%;
+    margin-inline: auto;
+}
+.formBody #inputName,
+.formBody #phnoLabel,
+.formBody #phone,
+.formBody #inputEmail4,
+.formBody #inputAddress,
+.formBody #exampleFormControlTextarea1 {
+    background: var(--bg_clr_input) !important;
+    min-height: 56px;
+    border-radius: 10px;
+    color: var(--text_clr_input);
+    font-size: 13px;
+    font-weight: 500;
+    padding-inline: 31px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formBody input::placeholder {
+    color: var(--text_clr_input);
+}
+
+.formBody textarea::placeholder {
+    color: var(--text_clr_input);
+}
+.formFooter {
+    display: flex;
+    justify-content: space-between;
+}
+.footerBtn {
+    width: 143px;
+    height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg_clr_primary1);
+    border-radius: 9px;
+    padding-inline: 17px;
+}
+.footerBtn .title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text_clr_white);
+    padding-inline-start: 14px;
+}
+.arrowIcon {
+    width: 50px;
+    height: 47px;
+    border-radius: 9px;
+    background: var(--text_clr_leftarrow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrowIcon .icon i {
+    color: var(--text_clr_white);
+}
+.footerBtn .icon i {
+    color: var(--text_clr_white);
+}
+@media only screen and (max-width: 800px) {
+    .formSec {
+        width: 100%;
+        padding: 50px;
+        /* height: 100%; */
+    }
+}
